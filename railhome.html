@@ -1,0 +1,965 @@
+<html lang="en"><!-- begin::Head --><head>
+		<meta charset="utf-8">
+        <meta name="csrf-token" content="tOF6uqBRGtFaS4jm3GCyHurWK2hSRMOyKrVOc7ga">
+
+        <title>Railwire Billing</title>
+		<meta name="description" content="Railwire Billing Subscriber Portal">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!--begin::Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+
+		<!--end::Fonts -->
+
+		<!--begin::Page Vendors Styles(used by this page) -->
+		
+
+		<!--end::Page Vendors Styles -->
+
+		<!--begin::Global Theme Styles(used by all pages) -->
+		<link href="/assets/NewSubscriberPortal/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
+		<link href="/assets/NewSubscriberPortal/css/style.bundle.css?version=1.2" rel="stylesheet" type="text/css">
+
+		<!--end::Global Theme Styles -->
+
+		<!--begin::Layout Skins(used by all pages) -->
+		<link href="/assets/NewSubscriberPortal/css/skins/header/base/brand.css" rel="stylesheet" type="text/css">
+		<link href="/assets/NewSubscriberPortal/css/skins/header/menu/light.css" rel="stylesheet" type="text/css">
+		<link href="/assets/NewSubscriberPortal/css/skins/brand/brand.css" rel="stylesheet" type="text/css">
+		<link href="/assets/NewSubscriberPortal/css/skins/aside/light.css" rel="stylesheet" type="text/css">
+		    <style type="text/css">
+    .kt-portlet .kt-portlet__foot{
+        padding: 25px;
+        padding-top: 0px !important;
+        border-top: none !important;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    </style>
+
+		<!--end::Layout Skins -->
+		<link rel="shortcut icon" href="/assets/NewSubscriberPortal/media/kfon/railwire-logo.png">
+		
+		<style> 
+			/*input[type=text] {
+			  width: 100%;
+			  padding: 12px 20px;
+			  margin: 8px 0;
+			  box-sizing: border-box;
+			  border: 3px solid #ccc;
+			  -webkit-transition: 0.5s;
+			  transition: 0.5s;
+			  outline: none;
+			}*/
+
+			input[type=text]:focus {
+			  border: 1px solid #8B0000;
+			}
+			input[type=email]:focus {
+			  border: 1px solid #8B0000;
+			}
+			input[type=password]:focus {
+			  border: 1px solid #8B0000;
+			}
+			input[type=radio]:focus {
+			  border: 1px solid #8B0000;
+			}
+			input[type=checkbox]:focus {
+			  border: 1px solid #8B0000;
+			}
+			.form-control:focus {
+			  border: 1px solid #8B0000;
+			}
+			.kt_selectpicker:focus {
+			  border: 1px solid #8B0000;
+			}
+			.nav-pills .nav-item .nav-link.active, .nav-pills .nav-item .nav-link.active:hover {
+	           background-color: #8B0000;
+	        }
+			.bootstrap-select.show > .dropdown-toggle.btn-light, .bootstrap-select.show > .dropdown-toggle.btn-secondar {
+			  border: 1px solid #8B0000;
+			}
+			.bootstrap-select > .dropdown-toggle.btn-light:focus, .bootstrap-select > .dropdown-toggle.btn-light.active, .bootstrap-select > .dropdown-toggle.btn-secondary:focus, .bootstrap-select > .dropdown-toggle.btn-secondary.active{
+				border: 1px solid #8B0000;
+			}
+			.modal-lg {
+			    max-width: 650px; 
+			}
+		</style>
+	<style type="text/css">/* Chart.js */
+/*
+ * DOM element rendering detection
+ * https://davidwalsh.name/detect-node-insertion
+ */
+@keyframes chartjs-render-animation {
+	from { opacity: 0.99; }
+	to { opacity: 1; }
+}
+
+.chartjs-render-monitor {
+	animation: chartjs-render-animation 0.001s;
+}
+
+/*
+ * DOM element resizing detection
+ * https://github.com/marcj/css-element-queries
+ */
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+	position: absolute;
+	direction: ltr;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.chartjs-size-monitor-expand > div {
+	position: absolute;
+	width: 1000000px;
+	height: 1000000px;
+	left: 0;
+	top: 0;
+}
+
+.chartjs-size-monitor-shrink > div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: 0;
+	top: 0;
+}
+</style></head>
+
+	<!-- end::Head -->
+	
+	
+	<!-- begin::Body -->
+	
+
+	<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed">
+
+		<!-- begin:: Header Mobile -->
+		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+			<div class="kt-header-mobile__logo">
+				<a href="">
+					<img height="40" alt="Logo" src="/assets/NewSubscriberPortal/media/kfon/railwire-logo.png">
+				</a>
+			</div>
+			<div class="kt-header-mobile__toolbar">
+				<button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+				
+				<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+			</div>
+		</div>
+
+		<!-- end:: Header Mobile -->
+
+		<!-- begin:: Root -->
+		<div class="kt-grid kt-grid--hor kt-grid--root">
+			<!-- begin:: Page -->
+			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+
+				<!-- begin:: Aside -->
+				<button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+	<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
+
+		<!-- begin::Aside Brand -->
+		<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+			<div class="kt-aside__brand-logo">
+				<h2 class="text-white">RailWire Billing</h2>
+				
+			</div>
+			<div class="kt-aside__brand-tools">
+				<button class="kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left" id="kt_aside_toggler"><span></span></button>
+			</div>
+		</div>
+
+		<!-- end:: Aside Brand -->
+		
+<!-- begin:: Aside Menu -->
+
+		<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+			<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500" style="overflow: auto; height: 570px;">
+				<ul class="kt-menu__nav ">
+                                            					<li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graphic"></i><span class="kt-menu__link-text">Account Summary</span></a>
+					</li>
+					
+					<li class="kt-menu__item  " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/myprofile" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-avatar"></i><span class="kt-menu__link-text">My Profile</span></a>
+					</li>
+					<li class="kt-menu__item  " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/portalpass" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-key"></i><span class="kt-menu__link-text">Portal Password Change</span></a>
+					</li>
+					<li class="kt-menu__item  " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/internetpass" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-unlock-alt"></i><span class="kt-menu__link-text">Internet Password Change</span></a>
+					</li>
+                                        
+					
+
+					<li class="kt-menu__item " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/onlinerechargepaymentop" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-credit-card"></i><span class="kt-menu__link-text">Recharge</span></a>
+					</li>
+
+					                                        <li class="kt-menu__item " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/subinvoicebfgst" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-file-invoice"></i><span class="kt-menu__link-text">My Receipts</span></a>
+					</li>
+					<li class="kt-menu__item " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/datausage" class="kt-menu__link "><i class="kt-menu__link-icon fa flaticon-refresh"></i><span class="kt-menu__link-text">My Data Usage</span></a>
+					</li>
+					<!-- <li class="kt-menu__item " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="https://kfon.onesuite.in/pack/add" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-mobile"></i><span class="kt-menu__link-text">My Add on Pack</span></a> 
+					</li> -->
+					<li class="kt-menu__item " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/crmcntl/subtickets" class="kt-menu__link "><i class="kt-menu__link-icon fa flaticon2-list-2"></i><span class="kt-menu__link-text">My Support Tickets</span></a>
+					</li>
+					
+														<li class="kt-menu__item " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+						<a href="/subcntl/oldrechargestatus/" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file-invoice-dollar"></i><span class="kt-menu__link-text">Old Transactions</span></a>
+					</li>
+								                                 <!--- STATIPC IP RECHARGE ----------->
+								<!---- END STATCI IP RECHARGE ------->
+                                
+                                <!---- END STATCI IP RECHARGE ------->
+				<!--- Registre OTT ----------->
+				                                <!--- Registre OTT ----------->
+				</ul>
+			</div>
+		</div>
+<style type="text/css">
+	li.kt-menu__item.kt-menu__item--submenu.kt-menu__item--rel {
+    padding: 15px;
+}
+</style>
+		<!-- end:: Aside Menu -->
+		
+	</div>
+                                
+<div id="editexpiry" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h4 class="blue ">The said ID has been deactivated, Due to non-renewal, Kindly confirm to reactivate the user.</h4>
+            </div>
+            
+
+            <input type="hidden" id="baseurl" name="baseurl" value="/">
+            <div class="modal-footer">
+                <button class="btn btn-sm" data-dismiss="modal">
+                    <i class="ace-icon fa fa-times"></i>
+                    Cancel
+                </button>
+
+                <a href="/subcntl/user_reactivate" class="btn btn-sm btn-primary" id="updateexpiry">
+                    <i class="ace-icon fa fa-check"></i>
+                    Confirm
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:: Aside -->
+	
+	
+
+<style>
+.kt-widget__link{
+	 margin-bottom:8px;
+}
+
+</style>
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+    <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+        <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn">
+            <i class="la la-close"></i>
+        </button>
+        <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+        <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout- ">
+            <ul class="kt-menu__nav ">
+                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click">
+                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                    <span class="kt-menu__link-text"><h5><i>24x7 Support @ 18001039139</i></h5></span>
+                    </a>    
+                </li>                               
+            </ul>
+        </div>
+    </div>
+
+       <div class="kt-header__topbar">
+
+                <input type="hidden" value="42452" id="hr_mn_se_seconnds">
+<script type="text/javascript">
+/*display_ct(); 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var d = new Date()
+
+var timechange=d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+alert(timechange);
+document.getElementById('ct').innerHTML = timechange;
+display_c();
+ }*/
+</script>
+        <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout- ">
+            <ul class="kt-menu__nav ">
+                <li class="kt-menu__item  " style="padding:0px">
+                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                            <span class="kt-menu__link-text" style="display:none">
+							<span class="">
+								13-11-2022 
+								<span id="hr_mn_se_timer"></span>
+							</span>
+						</span>                 
+                        <span class="kt-menu__link-text" id="date-part">
+							
+						</span>                 
+                        
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <!--begin: Notifications -->
+        <div class="kt-header__topbar-item dropdown">
+            <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px">
+                 <span class="kt-header__topbar-icon ">
+                    <i class="flaticon2-bell-alarm-symbol "></i>
+                    <span class="kt-badge kt-badge--dot kt-badge--notify kt-badge--sm kt-badge--brand"></span>
+                </span>
+<!--                <span class="kt-header__topbar-user kt-rounded-">
+                    <span class="">
+                        <img src="/assets/NewSubscriberPortal/media/kfon/RailWire 600x600 Logo.png"
+                            alt="Pic" class="kt-rounded-" style="height: 70px; width: 100px;margin-top: 3px;"
+                         >
+
+                    </span>
+                </span>-->
+            </div>
+            <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
+                                    
+            </div>
+        </div>
+        <!--end: Notifications -->
+
+        <!--begin: User Bar -->
+        <div class="kt-header__topbar-item kt-header__topbar-item--user">
+            
+            <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
+
+                <!--use "kt-rounded" class for rounded avatar style-->
+                <div class="kt-header__topbar-user kt-rounded-">
+                    <span class="kt-header__topbar-username kt-hidden-mobile">Varun m  </span>
+                    
+                        
+                        <img src="/assets/NewSubscriberPortal/media/users/avatar-user3.png" alt="Pic" class="kt-rounded-">
+                                        <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
+                    <span class="kt-badge kt-badge--username kt-badge--lg kt-badge--brand kt-hidden kt-badge--bold"></span>
+                </div>
+            </div>
+            <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
+                <ul class="kt-nav kt-margin-b-10">
+                    
+                    <li class="kt-nav__item">
+                        <a class="kt-nav__link" href="/rlogin/disconnect" target="_blank" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <span class="kt-nav__link-icon"><i class="flaticon2-browser-2"></i></span>
+                        <span class="kt-nav__link-text">Logout</span>
+                    </a>
+                    <form id="logout-form" action="/rlogin/disconnect">
+                        
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--end: User Bar -->
+
+
+    <!--end:: Quick Panel Toggler -->
+</div>
+    </div>
+
+						<!-- begin:: Content -->
+						<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+							                <form action="/subcntl/requestrenewip" class="horizontal-form" id="form_renewip" autocomplete="off" method="post" accept-charset="utf-8">
+<input type="hidden" name="railwire_test_name" value="4f690e4c02431341dbe33dc91c94a1d8">                                                                                                                       
+                            </form>
+            							
+    <div class="row">
+        <div class="col-lg-6 col-xl-6 order-lg-1 order-xl-1">
+            <!--begin::Portlet-->
+            <div class="kt-portlet kt-widget kt-widget--general-3 kt-portlet--height-fluid" style="border: 1px solid #8B0000">
+                <div class="kt-portlet__head  kt-portlet__head--noborder">
+                    <div class="kt-portlet__head-label">
+                        <h3 class="kt-portlet__head-title">Account Summary </h3>
+                    </div>
+                </div>
+                <div class="kt-portlet__body kt-portlet__body--fit">
+                    <div id="user_widget">
+                        <div class="kt-widget__top">
+
+                    <div class="kt-media kt-media--lg kt-media--circle">
+                            <img src="/assets/NewSubscriberPortal/media/users/avatar-user3.png" alt="Pic">
+                    </div>
+                    <div class="kt-widget__wrapper">
+                        <div class="kt-widget__label">
+                            <a class="kt-widget__title">
+                                Varun m                              </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="kt-widget__top">
+                    <div class="row">
+						<!--- Start First Box---->
+                        <div class="col-lg-6">
+                            <div class="kt-widget__cont">
+                                <div class="kt-widget__link">
+                                    <i class="flaticon2-user-outline-symbol  kt-font-brand"></i> Username : &nbsp;<a>tn.varunmurali</a>
+                                </div>
+                                <div class="kt-widget__link">
+                                    <i class="flaticon-event-calendar-symbol  kt-font-brand"></i> Registration Date : &nbsp;<a>2022-07-03</a>
+                                </div>
+                                
+                                <div class="kt-widget__link">
+                                    <i class="flaticon2-send  kt-font-brand"></i> Email ID : <a>ushamuralidhar1970@gmail.com</a>
+                                </div>
+                                
+                                <div class="kt-widget__link">
+                                    <i class="flaticon2-paperplane  kt-font-brand"></i> Plan Fee: &nbsp;<a> <b>₹</b> 588.82</a>
+                                </div>
+                                <div class="kt-widget__link">
+                                    <i class="flaticon-pie-chart  kt-font-brand"></i> Plan Name: &nbsp;<a> 50Mbps Unlimited</a>
+                                </div>
+                                <div class="kt-widget__link">
+                                    <i class="flaticon-pie-chart  kt-font-brand"></i> Subscription Status: &nbsp;<a> Active</a>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <!--- End First Box---->
+                        <!--- Start Second Box---->
+                        <div class="col-lg-6">
+                            <div class="kt-widget__cont">
+								<div class="kt-widget__link">
+                                    <i class="flaticon2-information kt-font-brand"></i> Subscriberid : &nbsp;<a>377719</a>
+                                </div>
+								<div class="kt-widget__link">
+                                    <i class="flaticon-squares-1 kt-font-brand"></i> Associated LCO : <a>Friends Satellite Communications - Gummidipundi</a>
+                                </div>
+                                <div class="kt-widget__link ">
+                                    <i class="flaticon2-phone  kt-font-brand "></i> Mobile No : <a>9894574796</a>
+                                </div>
+                           
+                                <div class="kt-widget__link">
+                                    <i class="flaticon2-time  kt-font-brand"></i> Expiry : &nbsp;<a> 04-12-2022</a>
+                                </div>
+                                <div class="kt-widget__link">
+                                    <i class="flaticon-calendar-with-a-clock-time-tools  kt-font-brand"></i> Last Renewal : &nbsp;<a> 04-11-2022</a>
+                                </div>
+                                                            </div>
+                        </div>
+                       <!--- End Second Box---->
+                    </div>
+                </div>
+                  
+                    <div class="kt-widget__top" style="padding-top: 0;padding-bottom: 0;">
+                        <div class="kt-widget__wrapper">
+                            <div class="kt-widget__links">
+                                <div class="kt-widget__cont">
+                                    
+                                    <div class="kt-widget__link">
+                                        <em>Please note that the typical usage information data can be up to 24 hours behind and the usage details should only be considered as an approximation. </em>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+                                    </div>
+                    
+                </div>
+                <div class="kt-portlet__foot">
+                    <div class="kt-form__actions">
+                        <div class="row">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--end::Portlet-->
+        </div>
+        <div class="col-lg-6 col-xl-6 order-lg-1 order-xl-1">
+
+            <!--begin::Portlet-->
+            <div class="kt-portlet kt-portlet--height-fluid " style="border: 1px solid #8B0000">
+                <div class="kt-portlet__head  kt-portlet__head--noborder">
+                    <div class="kt-portlet__head-label">
+                        <h3 class="kt-portlet__head-title">Data Usage </h3>
+                    </div>
+                </div>
+                <div class="kt-portlet__body kt-portlet__body--fluid">
+                    <canvas id="kt_chartjs_6" style="height: 361px; display: block; width: 723px;" width="723" height="361" class="chartjs-render-monitor"></canvas>
+
+                </div>
+                <div class="kt-portlet__foot p0">
+                    <div class="kt-form__actions">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="kt-widget__link">
+                                    <i class="flaticon2-pie-chart-2  kt-font-brand"></i> Data Used/Total Data : &nbsp;<a> <span id="span_data_used">0</span> GB / <span id="span_total_data"> 0 GB </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                            <br>
+                            <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end::Portlet-->
+        </div>
+    </div>
+                
+    
+    						</div>
+
+						<!-- end:: Content -->
+					
+<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+		<div class="kt-container  kt-container--fluid ">
+			<div class="kt-footer__copyright">
+				Copyright ©  2021 | Rconverge | All Rights Reserved
+			</div>
+			<!--div class="kt-footer__menu">
+				<a href="#" target="_blank" class="kt-footer__menu-link kt-link">About Us</a>
+			<a target="_blank" href="#" class="kt-footer__menu-link kt-link">Legals</a>
+				<a href="#" target="_blank" class="kt-footer__menu-link kt-link">Contact Us</a>
+			</div-->
+		</div>
+	</div>
+
+	<!-- end:: Footer -->
+</div>
+
+<!-- end:: Wrapper -->
+
+</div>
+
+<!-- end:: Page -->
+</div>
+
+		<!-- end:: Root -->
+
+
+		<!-- begin:: Scrolltop -->
+		<div id="kt_scrolltop" class="kt-scrolltop">
+			<i class="la la-arrow-up"></i>
+		</div>
+
+		
+
+		
+		
+
+<form action="/subcntl/iptvsubp" id="iptvfrm" method="post" accept-charset="utf-8">
+                                                                   <input type="hidden" name="railwire_test_name" value="4f690e4c02431341dbe33dc91c94a1d8">
+</form><form action="/subcntl/fupadvance_renew" id="renewal_submit" method="post" accept-charset="utf-8">
+                                                                                                   <input type="hidden" name="railwire_test_name" value="4f690e4c02431341dbe33dc91c94a1d8">
+    <input type="hidden" id="rsub" name="rsub">
+</form> 
+
+<!-- begin::Global Config(global config for global JS sciprts) -->
+		<script>
+			var KTAppOptions = {
+				"colors": {
+					"state": {
+						"brand": "#5d78ff",
+						"metal": "#c4c5d6",
+						"light": "#ffffff",
+						"accent": "#00c5dc",
+						"primary": "#5867dd",
+						"success": "#34bfa3",
+						"info": "#36a3f7",
+						"warning": "#ffb822",
+						"danger": "#fd3995",
+						"focus": "#9816f4"
+					},
+					"base": {
+						"label": [
+							"#c5cbe3",
+							"#a1a8c3",
+							"#3d4465",
+							"#3e4466"
+						],
+						"shape": [
+							"#f0f3ff",
+							"#d9dffa",
+							"#afb4d4",
+							"#646c9a"
+						]
+					}
+				}
+			};
+		</script>
+
+		<!-- end::Global Config -->
+
+		<!--begin::Global Theme Bundle(used by all pages) -->
+		<script src="/assets/NewSubscriberPortal/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+		<script src="/assets/NewSubscriberPortal/js/scripts.bundle.js" type="text/javascript"></script>
+		<script src="/assets/NewSubscriberPortal/js/timermoment.js" type="text/javascript"></script>
+        <script>
+		$(document).ready(function() {
+			var interval = setInterval(function() {
+				var momentNow = moment();
+				$('#date-part').html(momentNow.format('YYYY-MM-DD')+' '+momentNow.format('HH:mm:ss'));
+				//$('#time-part').html(momentNow.format('hh:mm:ss'));
+			}, 100);
+			
+		});
+		</script>
+		<!--end::Global Theme Bundle -->
+
+		<!--begin::Page Vendors(used by this page) -->
+		
+
+		<!--end::Page Vendors -->
+
+		<!--begin::Page Scripts(used by this page) -->
+		
+
+		<!--end::Page Scripts -->
+
+		<script type="text/javascript">
+			
+		  var timerVar = setInterval(countTimer, 1000);
+		  var totalSeconds = document.getElementById('hr_mn_se_seconnds').value;
+
+		  function countTimer() {
+		    ++totalSeconds;
+		    var hour = Math.floor(totalSeconds /3600);
+		    var minute = Math.floor((totalSeconds - hour*3600)/60);
+		    var seconds = totalSeconds - (hour*3600 + minute*60);
+		    if(hour.toString().length == 1)
+		    {
+		      var hour='0' + hour;
+		    }
+		    if(minute.toString().length == 1)
+		    {
+		      var minute='0' + minute;
+		    }
+		    if(seconds.toString().length == 1)
+		    {
+		      var seconds='0' + seconds;
+		    }
+		    document.getElementById("hr_mn_se_timer").innerHTML = hour + ":" + minute + ":" + seconds;
+		  }
+		</script>
+
+		<script type="text/javascript">
+				
+			 $(document).on({
+			   	ajaxStart: function() { 
+
+		            KTApp.blockPage({
+		                overlayColor: 'red',
+		                type: 'v2',
+		                state: 'primary',
+		                message: 'Processing...'
+		            });
+			   	},
+			    ajaxStop: function() { KTApp.unblockPage(); }    
+			});
+			
+		</script>
+		
+
+<script type="text/javascript">
+
+    var KTBootstrapSelect = function () {
+
+        // Private functions
+        var demos = function () {
+            // minimum setup
+            $('.kt_selectpicker').selectpicker();
+        }
+
+        return {
+            // public functions
+            init: function() {
+                demos(); 
+            }
+        };
+    }();
+
+    jQuery(document).ready(function() {    
+        KTBootstrapSelect.init();
+    });
+
+
+    var KTChartJSDemo = function() {
+
+        var demo6 = function(data_used,data_balance) {
+            var data_used = data_used;
+            var data_balance = data_balance;
+            var randomScalingFactor = function() {
+                return Math.round(Math.random() * 100);
+            };/**/
+
+            var chartData = {
+                datasets: [{
+                    data: [
+                    data_used,
+                    data_balance
+                    ],
+                    backgroundColor: [
+                    '#8B0000', 
+                    '#4ac959',
+                    //'#25D366',
+                    //'#f6aa33'
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                'Used Data',
+                'Balance Data'
+                ]
+
+            };
+
+            var ctx = $('#kt_chartjs_6');
+            var myBarChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: false,
+                        text: 'Donut Chart'
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    },
+                    tooltips: {
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                            var dataset = data.datasets[tooltipItem.datasetIndex];
+                          var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                            return previousValue + currentValue;
+                          });
+                          var currentValue = dataset.data[tooltipItem.index];
+                          var percentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                          return percentage + "%";
+                        }
+                      }
+                    }
+                    /*tooltips: {
+                        callbacks: {
+                          label: function(tooltipItem, data) {
+                            var dataset = data.datasets[tooltipItem.datasetIndex];
+                            var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+                            var total = meta.total;
+                            var currentValue = dataset.data[tooltipItem.index];
+                            var percentage = parseFloat((currentValue/total*100).toFixed(1));
+                            return currentValue + ' (' + percentage + '%)';
+                          },
+                          title: function(tooltipItem, data) {
+                            return data.labels[tooltipItem[0].index];
+                          }
+                        }
+                      },*/
+                    //colors: ['#1BC5BD','#f6aa33']
+                }
+            });
+        }
+
+
+        return {
+            // public functions
+            init: function(data_used,data_balance) {
+                // bar charts
+
+                // donut chart
+                demo6(data_used,data_balance);
+            }
+        };
+    }();
+
+    jQuery(document).ready(function() {
+       // KTChartJSDemo.init(20,80);
+    });
+
+
+        
+
+</script>
+<script type="text/javascript">
+    
+    $(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        //get modal data
+        $(document).on('click', 'a[data-async="true"]', function (e) {
+            e.preventDefault();
+
+            var self    = $(this),
+                url     = self.data('endpoint'),
+                target  = self.data('target'),
+                cache   = self.data('cache');
+                    $.ajax({
+                        url     : url,
+                        cache   : cache,
+                        success : function(result){
+                            //console.log(result);
+                            if (target !== 'undefined'){
+                                $('#'+target+' .modal-content').html(result);
+                                $('#erralert').hide();
+                                $('#erralert').html(" ");
+                                $('#'+target).modal();
+                            }
+                        },
+                        error : function(jqXHR,ajaxOptions,thrownError){
+                            console.log(jqXHR);
+                            console.log(jqXHR);
+                            console.log(ajaxOptions);
+                            console.log(thrownError);
+                            if (jqXHR.status === 0 || jqXHR.status === 404 || jqXHR.status === 500 || thrownError === 'parsererror' || thrownError === 'timeout' || thrownError === 'abort') {
+                                swal.fire({
+                                    "title": "Something went wrong !",
+                                    "text": "Please contact Customer Service to complete your request.",
+                                    "type": "error",
+                                    "buttonsStyling": false,
+                                    "confirmButtonClass": "btn btn-brand m-btn m-btn--wide"
+                                });
+                            }else if(jqXHR.status===419 || jqXHR.status===401){
+                                swal.fire({
+                                    "title": "",
+                                    "text": "Your session expired,Please refresh the page",
+                                    "type": "error",
+                                    "buttonsStyling": false,
+                                    "confirmButtonClass": "btn btn-brand m-btn m-btn--wide"
+                                });
+                            }
+                        }
+                    });
+        });
+
+        $(document).on('change', '#activations', function (e) {
+            var number = $(this).val();
+            //alert(selected_dt);
+            var subm_url = 'https://kfon.onesuite.in/account/summary';
+            
+            // e.preventDefault();
+            var url     = subm_url,
+                data    = { data : number},
+                target  = "mobile",
+                cache   = "false";
+            $.ajax({
+                url     : url,
+                cache   : cache,
+                data    : { data : number},
+                success : function(data){
+                    console.log(data);
+                    //alert(contents);
+                    $('#user_widget').empty().html(data);
+                    var data_used = $('#data_used').val();
+                    var data_balance = $('#data_balance').val();
+                    var total_data = $('#total_data').val();
+                    $('#span_total_data').html(total_data);
+                    $('#span_data_used').html(data_used);
+                    KTChartJSDemo.init(data_used,data_balance);
+                    //foo[method]();
+                },
+                error : function(jqXHR,ajaxOptions,thrownError){
+                    if (jqXHR.status === 0 || jqXHR.status === 404 || jqXHR.status === 500 || thrownError === 'parsererror' || thrownError === 'timeout' || thrownError === 'abort') {
+                        swal.fire({
+                            "title": "Something went wrong !",
+                            "text": "Please contact Customer Service to complete your request.",
+                            "type": "error",
+                            "buttonsStyling": false,
+                            "confirmButtonClass": "btn btn-brand m-btn m-btn--wide"
+                        });
+                    }else if(jqXHR.status===419 || jqXHR.status===401){
+                        swal.fire({
+                            "title": "",
+                            "text": "Your session expired,Please refresh the page",
+                            "type": "error",
+                            "buttonsStyling": false,
+                            "confirmButtonClass": "btn btn-brand m-btn m-btn--wide"
+                        });
+                    }
+                },
+            });
+            
+        });
+    });
+
+
+</script>
+
+	
+
+	
+
+
+
+<script>
+         $(document).ready(function(){
+         	jQuery(document).ready(function() {
+        KTChartJSDemo.init(0,100);
+    });
+            $('#iptv_btn').on('click', function(e){
+                $('#iptvfrm').submit();
+            });
+            $('#renewsub_btn').on('click', function(e){
+                e.preventDefault();
+                $('#rsub').val($(this).data("resubid"))
+                $('#renewal_submit').submit();
+            });
+
+         });
+</script>
+<style type="text/css">
+        .new_lable{
+            height: 1.5em;
+        }
+        .li_padding{
+            padding: 6px;
+        }
+    </style>
+</body><!-- end::Body --></html>
