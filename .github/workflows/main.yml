@@ -29,9 +29,9 @@ jobs:
 
           compose-file: "docker-compose.yml"
 
-          services: |
-            selenium
-            railwiredashboard
+          services: 
+            - selenium
+            - railwiredashboard
           
           docker_options: "--no-cache"
 
