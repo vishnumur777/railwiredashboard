@@ -1,6 +1,9 @@
 services:
  selenium:
   image: selenium/standalone-chrome
+  build:
+   context: .
+   shm_size: '2gb'
   ports:
    - 4444:4444
  railwiredashboard:
