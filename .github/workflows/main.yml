@@ -28,8 +28,6 @@ jobs:
           
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
 
-          dockerfile_directory: ./
-
           compose-file: "docker-compose.yml"
 
           services: |
